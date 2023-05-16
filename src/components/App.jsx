@@ -76,9 +76,7 @@ const App = () => {
 
       {images.length > 0 && <ImageGallery images={images} />}
 
-      {page < pageCount && !loading && (
-        <Button onClick={() => setPage(prev => prev + 1)} />
-      )}
+      {page < pageCount && <Button onClick={() => setPage(prev => prev + 1)} />}
 
       {error && (
         <HandleError imageURL={errorImg} alt={'Something went wrong'} />
